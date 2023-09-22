@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form>
+        <label for="fname">Voornaam:</label><br>
+        <input type="text" id="fname" name="fname" pattern="[A-Za-z]+" required><br><br>
+        
+        <label for="lname">Achternaam:</label><br>
+        <input type="text" id="lname" name="lname" pattern="[A-Za-z]+" required><br><br>
+        
+        <label for="gender">Geslacht:</label><br>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Man</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Vrouw</label><br><br>
+        
+        <label for="street">Straat met huisnummer:</label><br>
+        <input type="text" id="street" name="street" required><br><br>
+        
+        <label for="postcode">Postcode:</label><br>
+        <input type="text" id="postcode" name="postcode" required pattern="[0-9]{4}[A-Za-z]{2}"><br><br>
+        
+        <label for="city">Stad:</label><br>
+        <input type="text" id="city" name="city" required><br><br>
+        
+        <label for="country">Land:</label><br>
+        <select id="country" name="country">
+          <option value="">--Selecteer een land--</option>
+          <option value="Nederland">Nederland</option>
+          <option value="Duitsland">Duitsland</option>
+          <option value="Frankrijk">Frankrijk</option>
+          
+        </select><br><br>
+        
+        <label for="bsn">BSN-nummer:</label><br>
+        <input type="text" id="bsn" name="bsn" required pattern="[0-9]{9}"><br><br>
+        
+        <label for="destination">Vakantieland:</label><br>
+        <select id="destination" name="destination">
+          <option value="">--Selecteer een vakantieland--</option>
+          
+        </select><br><br>
+      
+        <label for="departure_date">Datum van vertrek:</label><br>
+        <input type="date" id="departure_date" name="departure_date"
+               min="{{current_date}}" required><br><br>
+      
+        <label for="return_date">Datum van terugkomst:</label><br>
+        <input type="date" id="return_date" name="return_date"
+               min="{{departure_date}}" required><br><br>
+      
+        <label for="number_of_companions">Aantal reisgenoten (max. 4 mensen):</label><br>
+        <input type="number" id="number_of_companions"
+               name= "number_of_companions"
+               min= "0"
+               max= "4"
+               required
+               ><br /><br />
+    
+      </form>
+      
+      
+    
+</body>
+</html>
